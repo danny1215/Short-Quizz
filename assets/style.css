@@ -1,0 +1,120 @@
+/*
+   card "password generator" style
+*/
+
+.card{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: white;
+  color: blue;
+}
+/*
+  header style
+*/
+header{
+
+align-self: center;
+ margin-top: 30px;
+ margin-bottom: 20px;
+}
+/*
+  footer style
+*/
+footer {
+  padding-bottom: 5px;
+  font-size: 15px;
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  
+}
+/*
+  body background image style
+*/
+body{
+  background-image: url(../images/imagedanny5.jpg);
+}
+
+
+/*
+  your secured password style
+*/
+.card-body2{
+  padding-top: 100px;
+  padding-left: 30px;
+ 
+}
+
+
+/*
+  container style
+*/
+.container{
+margin-top: auto;
+margin-bottom: auto;
+background-color: black;
+color: rgb(219, 13, 13);
+font-family: 'Roboto Slab', serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida          Grande','Lucida Sans', Arial, sans-serif;
+}
+
+/*
+  box style
+*/
+.box{
+  padding-bottom: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*
+  button style
+*/
+#passBtn1{
+  margin-bottom: 10px;
+
+  
+}
+
+#passBtn2{
+  margin-bottom: 10px;
+  
+}
+
+
+/*
+  secured password style
+*/
+#password{
+  margin:20px 50px;
+ 
+  border: 5px 5px;
+  
+  text-align: center;
+  font-weight: bolder;
+  background-color: green;
+ 
+}
+ 
+
+.options{
+   box-sizing: content-box;
+   background-color: green;
+   margin-bottom: 10px;
+}
+.options-1{
+  box-sizing: content-box;
+  background-color: green;
+}
+/* timer box styl */
+
+.card3{
+  margin-left: 200px;
+  text-align: end;
+  color: red;
+  box-sizing: border-box;
+}
