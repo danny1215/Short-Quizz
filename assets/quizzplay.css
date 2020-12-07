@@ -11,7 +11,7 @@
 .choice-container{
     cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 rgba(235, 86, 98, 0.5);
-
+background-color: white;
   transform: translateY(-0.1rem);
   transition: transform 150ms; 
 }
@@ -26,4 +26,12 @@
     font-style: italic;
     padding: 1.5rem;
     width: 100%;
+}
+.correct{
+background-color: blue;
+}
+
+.incorrect{
+
+
 }
