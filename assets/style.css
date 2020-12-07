@@ -5,7 +5,7 @@
   font-size: 60.5%;
 }
 *{
-  box-sizing: border-box;
+  
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -50,8 +50,12 @@ h3{
   align-items: center;
   max-width: 800px;
   margin: 0 auto ;
+  padding: 2rem;
+  background-image: url(./danny1.jpg);
 }
-.container-danny>*{
+
+
+.container-danny{
   width: 100%;
 }
 .flex-center{
