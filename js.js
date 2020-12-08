@@ -1,19 +1,13 @@
 console.log("am i connected");
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
-
-
-
-
-
-
+var timers = document.getElementById("time-left");
+var button = document.getElementById("saveResultBtn");
 var currentQuestion = {};
 var accepingAnswers = true;
 var score = 0;
 var questionCounter = 0;
 var availableQuestions = [];
-
-
 var questions =[
   {
     question: "Inside which HTML element do we put the JavaScript?",
@@ -63,9 +57,18 @@ var questions =[
 ]
 // constant 
 const max_questions = 5;
-
+  var timing = 20;
+  // timer for the Quiz
    var startquiz = function() {
-
+      var timer = setInterval(function(){
+        timers.innerHTML = timing;
+        timing--;
+        if(timing===0){
+          clearInterval(timer);
+          return window.location.assign("./final.html");
+          }
+      },1000);
+    
       questionCounter = 0;
       score = 0;
       
@@ -73,19 +76,13 @@ const max_questions = 5;
       availableQuestions =[...questions];
       
       getNewQuestion();
-      
-      
-      
-     
-
   };
 
-    getNewQuestion = function(){
-
+    var getNewQuestion = function(){
         if (availableQuestions.length ===0 || questionCounter >= max_questions  ) {
 
         // if end of available questions the go to new page (end of quizz page)
-          return window.location.assign("./end.html");
+          return window.location.assign("./final.html");
         }
          questionCounter++;
       //  i choose to use a random  questions so it will not repeat the same thing everytime we play the quiz
@@ -93,42 +90,28 @@ const max_questions = 5;
         // console.log(questionIndex);
         var currentQuestion = availableQuestions[questionIndex];
         question.innerText = currentQuestion.question;
-  
         choices.forEach(choice => {
         const number = choice.dataset['number'];
-      
         choice.innerText = currentQuestion['choice' + number];
-      
       });
-
       availableQuestions.splice(questionIndex, 1);
-
       acceptingAnswers = true;
     };
-
-
-    choices.forEach(choice => {
+      choices.forEach(choice => {
       choice.addEventListener("click", function(e) {
-        
         if(!acceptingAnswers) return;
-
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-
         // to make sure whether it is correct or incorrect
-
+        
         const classToApply =
-         selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
-
+        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
         selectedChoice.parentElement.classList.add(classToApply);
         // selectedChoice.parentElement.classList.remove(classToApply);
-        
-        
         getNewQuestion();
+       });
       });
-      
-    });
-startquiz();
 
 
+  startquiz();

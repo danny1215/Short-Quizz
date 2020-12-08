@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   color: red;
-  
 }
 
 h1,
@@ -78,9 +77,38 @@ h3{
   width: 20rem;
   text-align: center;
   border: 0.1rem solid #56a5eb;
+  margin-top: 5rem;
+  margin-right: 5rem;
   margin-bottom: 1 rem;
   text-decoration: none;
   color: #56a5eb;
+  background-color: white;
+}
+/* userName btm style */
+#username{
+  flex-direction: column;
+ 
+  font-size: 1.8rem;
+  padding: 1rem;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-right: 5rem;
+ 
+  background-color: white;
+}
+
+.btnDanny{
+  flex-direction: column;
+  display: flex;
+  font-size: 1.8rem;
+  padding: 1rem;
+  width: 20rem;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
   background-color: white;
 }
 /* changing stryle from cursor to pointer */
@@ -115,3 +143,4 @@ footer {
   text-align: center;
   
 }
+
