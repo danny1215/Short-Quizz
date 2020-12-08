@@ -4,11 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>final HTML</HTML></title>
   </head>
   <body>
@@ -38,37 +38,12 @@
 
     <!-- i have decided to write my javascript for the final html here!! -->
     <script>
-        var initialInput = document.querySelector("#username");
-        var submitButton = document.querySelector("#saveResultBtn");
-        var msgDiv = document.querySelector("#msg");
-        var initialNameSpan = document.querySelector("#user-first-name");
-        function displayMessage(type, message) {
-        msgDiv.textContent = message;
-        msgDiv.setAttribute("class", type);
-      }
-
-      submitButton.addEventListener("click", function(event) {
-      event.preventDefault();
-
-          //    create user object from submission
-          var user = {
-            initialName: initialInput.value.trim(),
+      
     
-      };
-        if (user.initialName === "") {
-            displayMessage("error", "initial name cannot be blank");
-        } else {
-            displayMessage("success", "Registered successfully");
-        }
-    // set new submission
-    // this is used to change an object to a string
-        localStorage.setItem("user", JSON.stringify(user));
-
-    // get most recent submission
-        var lastUser = JSON.parse(localStorage.getItem("user"));
-        userInitialNameSpan.textContent = lastUser.firstName;
-    
-      });
     </script>
   </body>
 </html>
+
+
+
+

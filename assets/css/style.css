@@ -4,6 +4,8 @@
   background-color: ivory;
   font-size: 60.5%;
 }
+
+/* body style */
 *{
   
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif,'Lora';
@@ -18,18 +20,18 @@ h3,
 h4{
   margin-bottom: 1rem;
 }
-
+/* h1 style */
 h1{
   font-size: 6rem;
   color:blue ;
   margin-bottom: 5rem;
 }
-
+/* h1 style */
 h1> span {
   font-size: 2.4rem;
   font-weight: 500;
 }
-
+/* h2 style */
 h2{
   font-size: 4.2rem;
   margin-bottom: 4rem;
@@ -51,10 +53,10 @@ h3{
   max-width: 800px;
   margin: 0 auto ;
   padding: 2rem;
-  background-image: url(./danny1.jpg);
+  background-image: url(../image/danny1.jpg);
 }
 
-
+/* container danny style */
 .container-danny{
   width: 100%;
 }
@@ -97,7 +99,7 @@ h3{
  
   background-color: white;
 }
-
+/* button style */
 .btnDanny{
   flex-direction: column;
   display: flex;
@@ -118,7 +120,7 @@ h3{
   transform: translateY(-0.1rem);
   transition: transform 150ms; 
 }
-
+/* button style */
 .btn[disabled]:hover{
   cursor: not-allowed;
   box-shadow: none;
@@ -143,4 +145,18 @@ footer {
   text-align: center;
   
 }
+/* name and high scores style */
+#high-scores{
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+/* styles for correct and incorrect answers */
+.correct{
 
+  background-image: url(../assets/danny\ right.png);
+}
+
+.incorrect{
+  background-image: url(../assets/danny\ wrong.png);
+}

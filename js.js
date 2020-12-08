@@ -1,13 +1,15 @@
 console.log("am i connected");
+// declaration of variable of ids and classes
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
 var timers = document.getElementById("time-left");
 var button = document.getElementById("saveResultBtn");
 var currentQuestion = {};
 var accepingAnswers = true;
-var score = 0;
+var score = [];
 var questionCounter = 0;
 var availableQuestions = [];
+// questions array
 var questions =[
   {
     question: "Inside which HTML element do we put the JavaScript?",
@@ -68,16 +70,17 @@ const max_questions = 5;
           return window.location.assign("./final.html");
           }
       },1000);
-    
+    // start question counter from 0
       questionCounter = 0;
       score = 0;
       
-      // shorter way of writing a an array of questions
+      // shorter way of writing an array of questions to the new declaration of new var(availableQuestions)
+
       availableQuestions =[...questions];
       
       getNewQuestion();
   };
-
+// function getNewQuestion
     var getNewQuestion = function(){
         if (availableQuestions.length ===0 || questionCounter >= max_questions  ) {
 
@@ -87,9 +90,10 @@ const max_questions = 5;
          questionCounter++;
       //  i choose to use a random  questions so it will not repeat the same thing everytime we play the quiz
         var questionIndex = Math.floor(Math.random() * availableQuestions.length);
-        // console.log(questionIndex);
+       
         var currentQuestion = availableQuestions[questionIndex];
         question.innerText = currentQuestion.question;
+        // for each statment
         choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
@@ -97,21 +101,20 @@ const max_questions = 5;
       availableQuestions.splice(questionIndex, 1);
       acceptingAnswers = true;
     };
+    // for each statment
       choices.forEach(choice => {
       choice.addEventListener("click", function(e) {
+        e.preventDefault();
         if(!acceptingAnswers) return;
+// this is me trying to target the selected choices with selected answers
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        // to make sure whether it is correct or incorrect
+
         
-        const classToApply =
-        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
-        selectedChoice.parentElement.classList.add(classToApply);
-        // selectedChoice.parentElement.classList.remove(classToApply);
         getNewQuestion();
        });
       });
 
-
+// envoking of the function startquiz
   startquiz();
